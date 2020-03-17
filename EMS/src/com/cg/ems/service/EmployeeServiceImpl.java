@@ -16,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	public EmployeeServiceImpl()
 	{
-		employeeDao = new EmployeeDaoJdbcImpl();
+		employeeDao = new EmployeeDaoMapImpl();
 	}
 	
 	
