@@ -55,8 +55,14 @@ public class EmployeeDaoMapImpl implements EmployeeDao {
 
 	@Override
 	public Employee deleteEmployeeById(int employeeId) throws EmployeeException {
-		// TODO Auto-generated method stub
-		return null;
+		
+		
+		Employee  employee =  map.remove(employeeId);
+		if(employee==null)
+		{
+			throw  new EmployeeException(" ID NOT FOUND");
+		}
+		return employee;
 	}
 
 	@Override

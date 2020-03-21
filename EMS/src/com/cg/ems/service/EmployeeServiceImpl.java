@@ -14,9 +14,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	private EmployeeDao  employeeDao;
 	
+	
+	
 	public EmployeeServiceImpl()
 	{
 		employeeDao = new EmployeeDaoMapImpl();
+		
 	}
 	
 	
@@ -58,7 +61,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public Employee deleteEmployeeById(int employeeId) throws EmployeeException {
 		
-		return null;
+		return employeeDao.deleteEmployeeById(employeeId);
 	}
 
 	@Override
